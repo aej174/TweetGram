@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -653,7 +655,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="TweetGram" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -679,11 +681,71 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="TweetGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Do-qY-iyY">
+                                <rect key="frame" x="203" y="243" width="74" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="TweetGram" id="NBx-cf-cFO">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LHX-Rr-fYg">
+                                <rect key="frame" x="203" y="205" width="74" height="32"/>
+                                <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dra-gg-0t6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="loginLogoutClicked:" target="XfG-lQ-9wD" id="dFf-fn-7JZ"/>
+                                </connections>
+                            </button>
+                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4P-02-gYS">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="202"/>
+                                <clipView key="contentView" drawsBackground="NO" id="gq6-Tk-ui8">
+                                    <rect key="frame" x="1" y="1" width="478" height="200"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView selectable="YES" id="8S2-IP-80q">
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="hhe-Q0-uLj">
+                                                <size key="itemSize" width="50" height="50"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="o5Q-Lh-NOk">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="TAR-LE-lJC">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="LHX-Rr-fYg" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="5B5-cn-sLX"/>
+                            <constraint firstItem="0Do-qY-iyY" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="77B-C7-YyS"/>
+                            <constraint firstItem="M4P-02-gYS" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Idn-Cq-aKa"/>
+                            <constraint firstAttribute="trailing" secondItem="M4P-02-gYS" secondAttribute="trailing" id="dGq-Sr-dan"/>
+                            <constraint firstItem="LHX-Rr-fYg" firstAttribute="top" secondItem="0Do-qY-iyY" secondAttribute="bottom" constant="10" id="etK-kc-Vb3"/>
+                            <constraint firstItem="M4P-02-gYS" firstAttribute="top" secondItem="LHX-Rr-fYg" secondAttribute="bottom" constant="10" id="pCE-8d-6tr"/>
+                            <constraint firstItem="0Do-qY-iyY" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="uwB-zF-bWz"/>
+                            <constraint firstAttribute="bottom" secondItem="M4P-02-gYS" secondAttribute="bottom" id="zei-gf-Ml5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="8S2-IP-80q" id="QTe-G7-CfR"/>
+                        <outlet property="loginLogoutButton" destination="LHX-Rr-fYg" id="7nz-wg-esO"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TweetGramItem" customModule="TweetGram" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="clt-8L-6oQ" id="79J-yL-De9"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView misplaced="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="437" height="671"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clt-8L-6oQ">
+                    <rect key="frame" x="-1" y="-58" width="438" height="448"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Katie's graduation" id="ywX-vc-sNX"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="clt-8L-6oQ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="3i6-iz-NnR"/>
+                <constraint firstAttribute="bottom" secondItem="clt-8L-6oQ" secondAttribute="bottom" id="DUn-HV-fOx"/>
+                <constraint firstAttribute="trailing" secondItem="clt-8L-6oQ" secondAttribute="trailing" id="H4m-Jf-prs"/>
+                <constraint firstItem="clt-8L-6oQ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Xz6-hV-ppw"/>
+            </constraints>
+            <point key="canvasLocation" x="-23" y="158"/>
+        </customView>
+        <collectionViewItem id="EMa-qx-OZH" customClass="TweetGramItem" customModule="TweetGram" customModuleProvider="target"/>
+    </objects>
+    <resources>
+        <image name="Katie's graduation" width="960" height="720"/>
+    </resources>
+</document>

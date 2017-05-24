@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62E0B4981ECB3F3E003F022F"
-               BuildableName = "TweetGram.app"
-               BlueprintName = "TweetGram"
-               ReferencedContainer = "container:TweetGram.xcodeproj">
+               BlueprintIdentifier = "73B08E879EE57F959B61B58952886916"
+               BuildableName = "Pods_TweetGram.framework"
+               BlueprintName = "Pods-TweetGram"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62E0B4981ECB3F3E003F022F"
-            BuildableName = "TweetGram.app"
-            BlueprintName = "TweetGram"
-            ReferencedContainer = "container:TweetGram.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62E0B4981ECB3F3E003F022F"
-            BuildableName = "TweetGram.app"
-            BlueprintName = "TweetGram"
-            ReferencedContainer = "container:TweetGram.xcodeproj">
+            BlueprintIdentifier = "73B08E879EE57F959B61B58952886916"
+            BuildableName = "Pods_TweetGram.framework"
+            BlueprintName = "Pods-TweetGram"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62E0B4981ECB3F3E003F022F"
-            BuildableName = "TweetGram.app"
-            BlueprintName = "TweetGram"
-            ReferencedContainer = "container:TweetGram.xcodeproj">
+            BlueprintIdentifier = "73B08E879EE57F959B61B58952886916"
+            BuildableName = "Pods_TweetGram.framework"
+            BlueprintName = "Pods-TweetGram"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
